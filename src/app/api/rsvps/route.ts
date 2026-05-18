@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx0iQK9wubcrA7LOOvHP13T9-BMvmB6UAvW-FMs1PWJyHacyHVPYXOZ68052imdGQ7b/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzlpO5VfK2KX2NVonPLnUB3BCOQqVLbtuBap8oRGhYNiMUrH-B0MVZ4uf_ihKvJ6ahh/exec";
 
 interface Guest {
   firstName: string;

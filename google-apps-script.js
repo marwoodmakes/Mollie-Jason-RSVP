@@ -14,6 +14,14 @@
  */
 
 const SHEET_NAME = "RSVPs";
+const HEADERS = ["Timestamp", "First Name", "Last Name", "Dietary", "Bottle", "Guests JSON", "Status", "Camping"];
+
+function onOpen() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+  const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
+  headerRange.setValues([HEADERS]);
+  headerRange.setFontWeight("bold");
+}
 
 function doGet() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);

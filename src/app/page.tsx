@@ -276,7 +276,14 @@ function RSVPForm({ onSubmit, loading, bottles }: { onSubmit: (data: RsvpData) =
           cursor: canSubmit ? "pointer" : "not-allowed", transition: "all 0.4s ease", opacity: loading ? 0.6 : 1,
         }}
       >
-        {loading ? "Sending..." : "Let\u2019s party"}
+        {loading ? "Sending..." : (
+          <>
+            Let&apos;s party
+            <span style={{ display: "block", fontFamily: "var(--font-outfit), sans-serif", fontSize: 12, fontWeight: 300, letterSpacing: "1px", textTransform: "none", marginTop: 4, opacity: 0.8 }}>
+              RSVP by 31st May 2026
+            </span>
+          </>
+        )}
       </button>
     </div>
   );
