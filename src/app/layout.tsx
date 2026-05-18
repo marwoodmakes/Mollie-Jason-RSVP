@@ -16,8 +16,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mollie-jason-rsvp.vercel.app"),
   title: "Mollie & Jason - RSVP",
-  description: "Saturday, 22nd August 2026",
+  description: "Saturday, 22nd August 2026 — Bathampton Home Farm",
+  openGraph: {
+    title: "Mollie & Jason - RSVP",
+    description: "Saturday, 22nd August 2026 — Bathampton Home Farm",
+  },
 };
 
 export default function RootLayout({

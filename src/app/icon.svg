@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#B8A8C8"/>
+  <text x="16" y="13" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="300" fill="#fff">M</text>
+  <text x="16" y="20" text-anchor="middle" font-family="Georgia, serif" font-size="5" font-style="italic" fill="#F2E8E3">&amp;</text>
+  <text x="16" y="27" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="300" fill="#fff">J</text>
+</svg>
