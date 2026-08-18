@@ -67,6 +67,8 @@ const RAW: RawEntry[] = [
   ["Amy", "Goodberry", "meat", "cosmo", [["Mitchell", "Tuby", "meat"], ["George", "Stuart", "meat"]], "No"],
   ["Jade", "Barnes", "meat", "mojito", [["Hayden", "Barnes", "meat"], ["Evoleht", "Barnes", "meat"], ["Chester", "Barnes", "meat"]], "Yes"],
   ["Matthew", "Edwards", "meat", "maitai", [], "Yes"],
+  ["Greg", "Pfauntsch", "meat", "oldfashioned", [["Emilia", "Pfauntsch", "meat"]], "Yes"],
+  ["Stacey", "Fussell", "meat", "cosmo", [["Nellie", "van der Meer", "meat"], ["Amelie", "Capo", "meat"]], "No"],
 ];
 
 interface PartyMember {
