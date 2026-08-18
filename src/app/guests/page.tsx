@@ -235,21 +235,46 @@ function ScheduleItem({ time, title, desc, active }: { time: string; title: stri
   );
 }
 
+function Parking() {
+  return (
+    <a
+      href="https://what3words.com/sung.drape.chips"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "block", textDecoration: "none", background: colors.card, borderRadius: 12,
+        padding: "18px 20px", marginBottom: 8, border: `1px solid ${colors.linen}`,
+        boxShadow: "0 2px 24px rgba(0,0,0,0.04)", animation: "fadeUp 0.6s ease both",
+      }}
+    >
+      <span style={{ fontFamily: sans, fontSize: 11, textTransform: "uppercase", letterSpacing: "1.5px", color: colors.warmGrey }}>
+        Parking
+      </span>
+      <p style={{ fontFamily: serif, fontSize: 24, fontWeight: 500, color: colors.text, marginTop: 4 }}>
+        {"///sung.drape.chips"}
+      </p>
+      <p style={{ fontFamily: sans, fontSize: 12, fontWeight: 300, color: colors.textLight, marginTop: 4 }}>
+        Tap to open in what3words
+      </p>
+    </a>
+  );
+}
+
 function Schedule() {
   const items = [
-    { time: "12:00 – 12:45", title: "Arrivals", desc: "Guests arrive at the farm. Guitar playing in the background." },
-    { time: "1:00 PM", title: "Ceremony on the lawn", desc: "Luke officiating — dressed for the occasion." },
-    { time: "1:30 – 2:00", title: "Food arrives", desc: "Hāngī / pulled pork spread laid out." },
-    { time: "2:00 PM", title: "Sit down & speeches", desc: "Eat while the speeches run." },
-    { time: "2:30 – 4:00", title: "Chill time", desc: "Live music, drinks, wander the grounds." },
-    { time: "4:00 – 6:00", title: "Live band", desc: "Full set through the afternoon." },
-    { time: "5:00 – 7:00", title: "Second food service", desc: "Pizza van + grazing table restocked." },
-    { time: "7:00 PM onwards", title: "Dance floor opens", desc: "Tables cleared, DJ / playlist takes over." },
-    { time: "All day", title: "Cocktail bar", desc: "Self-serve — bring your bottle, mix your own." },
+    { time: "12:00 \u2013 12:45", title: "Arrival", desc: "Park up and make your way in." },
+    { time: "12:45 \u2013 1:00", title: "Ceremony", desc: "On the grass!" },
+    { time: "1:30 \u2013 2:30", title: "Lunch" },
+    { time: "2:30 \u2013 3:00", title: "Speeches" },
+    { time: "3:00 \u2013 5:00", title: "Relaxed vibe" },
+    { time: "5:00 \u2013 7:00", title: "Pizza Time!" },
+    { time: "7:00 \u2013 late!", title: "Dancing!" },
+    { time: "All day", title: "Cocktail bar", desc: "Self-serve \u2014 bring your bottle, mix your own." },
     { time: "All night", title: "Kids den", desc: "Blankets, cushions & a quiet corner in the pavilion." },
   ];
   return (
     <div style={{ animation: "fadeUp 0.6s ease both", marginTop: 8 }}>
+      <Parking />
       {items.map((it, i) => (
         <ScheduleItem key={i} {...it} active={i === 1} />
       ))}
