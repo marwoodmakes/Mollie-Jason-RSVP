@@ -31,6 +31,8 @@ const BOTTLE_MAP: Record<string, string> = {
   oldfashioned: "Old Fashioned \u{1F943}",
 };
 
+const PROSECCO = "Prosecco \u{1F942}";
+
 type RawGuest = [string, string, string];
 type RawEntry = [string, string, string, string, RawGuest[], string];
 
@@ -156,9 +158,21 @@ function ResultCard({ person }: { person: Person }) {
         {person.role === "Primary" && person.bottle && (
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, padding: "10px 14px", background: colors.blushLight, borderRadius: 8 }}>
             <span style={{ fontFamily: sans, fontSize: 13, color: colors.textLight }}>Bottle pledged</span>
-            <span style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: colors.text }}>{person.bottle}</span>
+            <span style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: colors.text, textAlign: "right" }}>
+              {person.bottle} <span style={{ color: colors.textLight }}>+</span> {PROSECCO}
+            </span>
           </div>
         )}
+
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 14px", background: colors.blushLight, borderRadius: 8 }}>
+          <span style={{ fontSize: 15, lineHeight: 1.4 }}>{"\u{1F942}"}</span>
+          <span style={{ fontFamily: serif, fontSize: 14, fontWeight: 400, fontStyle: "italic", color: colors.textLight, lineHeight: 1.5 }}>
+            {person.role === "Primary"
+              ? "If you can, pop a bottle of Prosecco in the car alongside your cocktail bottle — "
+              : "If you can, pop a bottle of Prosecco in the car on the day — "}
+            it keeps the toasts going through the afternoon. Absolutely no stress if not.
+          </span>
+        </div>
 
         {person.party.length > 0 && (
           <div style={{ padding: "10px 14px", background: colors.cream, borderRadius: 8 }}>
@@ -271,7 +285,7 @@ function Schedule() {
     { time: "3:00 \u2013 5:00", title: "Relaxed vibe" },
     { time: "5:00 \u2013 7:00", title: "Pizza Time!" },
     { time: "7:00 \u2013 late!", title: "Dancing!" },
-    { time: "All day", title: "Cocktail bar", desc: "Self-serve \u2014 bring your bottle, mix your own." },
+    { time: "All day", title: "Cocktail bar", desc: "Self-serve \u2014 bring your cocktail bottle and a bottle of Prosecco, mix your own." },
     { time: "All night", title: "Kids den", desc: "Blankets, cushions & a quiet corner in the pavilion." },
   ];
   return (
